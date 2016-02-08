@@ -1,3 +1,5 @@
+package administrate.db;
+
 import administrate.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;

@@ -69,4 +69,13 @@ public class User {
                 ", birthPlace='" + birthPlace + '\'' +
                 '}';
     }
+
+    
+    public User(Long id, String firstName, String lastName, String birhtDay, String birthPlace) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birhtDay = birhtDay;
+        this.birthPlace = birthPlace;
+    }
 }

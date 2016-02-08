@@ -1,5 +1,6 @@
 package administrate.dao;
 
+import administrate.db.HibernateUtil;
 import org.hibernate.Criteria;
 import org.hibernate.NonUniqueObjectException;
 import org.hibernate.Session;

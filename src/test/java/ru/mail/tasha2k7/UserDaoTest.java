@@ -8,4 +8,5 @@ import administrate.dao.impl.UserDaoImpl;
  */
 public class UserDaoTest {
     private UserDao userdao = new UserDaoImpl();
+
 }
