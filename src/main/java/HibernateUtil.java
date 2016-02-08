@@ -1,7 +1,7 @@
 import administrate.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
-import ru.mail.tasha2k7.entity.Patient;
+
 
 /**
  * Created by Wolfsjunge on 07.02.2016.
