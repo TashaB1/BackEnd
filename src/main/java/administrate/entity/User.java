@@ -59,5 +59,14 @@ public class User {
         this.birthPlace = birthPlace;
     }
 
-
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birhtDay='" + birhtDay + '\'' +
+                ", birthPlace='" + birthPlace + '\'' +
+                '}';
+    }
 }
