@@ -3,6 +3,7 @@ package administrate.entity;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by USER on 03.02.2016.
@@ -20,6 +21,17 @@ public class User {
     @Column(name = "birthDay")
     private Date birhtDay;
     private String birthPlace;
+
+    public List<Phone> getPhones() {
+        return phones;
+    }
+
+    public void setPhones(List<Phone> phones) {
+        this.phones = phones;
+    }
+
+    @OneToMany(targetEntity = Phone.class, mappedBy = "user", fetch = FetchType.EAGER)
+    private List<Phone> phones;
 
     public Long getId() {
         return id;
@@ -67,9 +79,9 @@ public class User {
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", birhtDay='" + birhtDay + '\'' +
+                ", birhtDay=" + birhtDay +
                 ", birthPlace='" + birthPlace + '\'' +
+                ", phones=" + phones +
                 '}';
     }
-
 }

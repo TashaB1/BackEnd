@@ -1,5 +1,6 @@
 package administrate.db;
 
+import administrate.entity.Phone;
 import administrate.entity.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -13,7 +14,7 @@ public class HibernateUtil {
 
     static {
         try {
-            sessionFactory = new AnnotationConfiguration().addPackage("ru.mail.tasha2k7.entity").addAnnotatedClass(User.class)
+            sessionFactory = new AnnotationConfiguration().addPackage("ru.mail.tasha2k7.entity").addAnnotatedClass(User.class).addAnnotatedClass(Phone.class)
                     .configure().buildSessionFactory();
         } catch (Throwable ex) {
             System.err.println("Initial SessionFactory creation failed." + ex);
