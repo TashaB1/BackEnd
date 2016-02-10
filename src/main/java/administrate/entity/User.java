@@ -2,13 +2,14 @@ package administrate.entity;
 
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by USER on 03.02.2016.
  */
 
 @Entity
-@Table(name = "BackEnd")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -16,7 +17,8 @@ public class User {
     private Long id;
     private String firstName;
     private String lastName;
-    private String birhtDay;
+    @Column(name = "birthDay")
+    private Date birhtDay;
     private String birthPlace;
 
     public Long getId() {
@@ -43,11 +45,11 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String getBirhtDay() {
+    public Date getBirhtDay() {
         return birhtDay;
     }
 
-    public void setBirhtDay(String birhtDay) {
+    public void setBirhtDay(Date birhtDay) {
         this.birhtDay = birhtDay;
     }
 
@@ -70,12 +72,4 @@ public class User {
                 '}';
     }
 
-    
-    public User(Long id, String firstName, String lastName, String birhtDay, String birthPlace) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birhtDay = birhtDay;
-        this.birthPlace = birthPlace;
-    }
 }
