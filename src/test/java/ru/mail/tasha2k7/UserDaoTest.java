@@ -6,6 +6,8 @@ import administrate.db.HibernateUtil;
 import administrate.entity.Phone;
 import administrate.entity.User;
 
+import administrate.service.UserService;
+import administrate.service.impl.UserServiceImpl;
 import org.hibernate.Criteria;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
@@ -92,6 +94,7 @@ public class UserDaoTest {
         HibernateUtil.getSessionFactory().getCurrentSession().close();
     }
 
+    @Ignore
     @Test
     public void phoneUser() {
 
@@ -117,4 +120,6 @@ public class UserDaoTest {
         HibernateUtil.getSessionFactory().getCurrentSession().getTransaction().commit();
         HibernateUtil.getSessionFactory().getCurrentSession().close();
     }
+
+
 }
