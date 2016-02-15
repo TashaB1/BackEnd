@@ -17,7 +17,7 @@ public class Phone {
     private Long phone;
 
     @ManyToOne(targetEntity = User.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "id_user") /*id_user имя колонки в базе, в кот ссылка на юзера*/
     private User user;
 
     public Long getId() {
