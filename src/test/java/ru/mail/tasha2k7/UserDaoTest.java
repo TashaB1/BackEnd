@@ -66,8 +66,9 @@ public class UserDaoTest {
         HibernateUtil.getSessionFactory().getCurrentSession().close();
     }
 
+    @Ignore
     @Test
-    public void phoneUser() {
+    public void phoneIdUser() {
 
         User user = new User();
 
@@ -89,9 +90,31 @@ public class UserDaoTest {
         userdao.save(user);
         HibernateUtil.getSessionFactory().getCurrentSession().getTransaction().commit();
         HibernateUtil.getSessionFactory().getCurrentSession().close();
+    }
+
+    @Test
+    public void phoneUser() {
 
 
+        HibernateUtil.getSessionFactory().getCurrentSession().getTransaction().begin();
 
+        User user = userdao.getById(5L);
 
+        //user.setPhones(new ArrayList<Phone>());
+
+        Phone phone1 = new Phone();
+        Phone phone2 = new Phone();
+
+        phone1.setPhone(111113L);
+        phone2.setPhone(222223L);
+
+        phone1.setUser(user);
+        phone2.setUser(user);
+
+        user.getPhones().add(phone1);
+        user.getPhones().add(phone2);
+        userdao.save(user);
+        HibernateUtil.getSessionFactory().getCurrentSession().getTransaction().commit();
+        HibernateUtil.getSessionFactory().getCurrentSession().close();
     }
 }
