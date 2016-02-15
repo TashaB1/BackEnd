@@ -30,7 +30,7 @@ public class User {
         this.phones = phones;
     }
 
-    @OneToMany(targetEntity = Phone.class, mappedBy = "user", fetch = FetchType.EAGER)
+    @OneToMany(targetEntity = Phone.class, mappedBy = "user", fetch = FetchType.LAZY ,cascade = CascadeType.ALL)
     private List<Phone> phones;
 
     public Long getId() {
