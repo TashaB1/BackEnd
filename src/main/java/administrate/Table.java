@@ -37,7 +37,7 @@ public class Table extends Application { /*docs.oracle.com/javafx/2/ui_controls/
         final ObservableList<User> data = FXCollections.observableArrayList(userService.setUsers());
 
         Scene scene = new Scene(new Group());
-        stage.setTitle("Table Semple");
+        stage.setTitle("Table Simple");
         stage.setWidth(300);
         stage.setHeight(500);
 
